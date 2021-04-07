@@ -1,7 +1,6 @@
 <?php
-$nameErr = $emailErr = $phoneErr = $checkinErr = $checkoutErr = $accomodatesErr = "";
+$nameErr = $emailErr = $phoneErr = $checkinErr = $checkoutErr = "";
 $name = $email = $phone = $checkin = $checkout = "";
-$accomodates = 0;
 $checkErr = false;
 $report = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -35,12 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $checkErr = true;
     }
   }
-  if (empty($_POST["accomodates"]) || $_POST["accomodates"] == "No. of Adult") {
-    $accomodatesErr = "Accomodates is required";
-    $checkErr = true;
-  } else {
-    $accomodates = test_input($_POST["accomodates"]);
-  }
   if (empty($_POST["checkin"])) {
     $checkinErr = "Check-in date is required";
     $checkErr = true;
@@ -62,9 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if ($phoneErr != "" ) {
       $report .= $phoneErr . "<br>";
-    }
-    if ($accomodatesErr != "" ) {
-      $report .= $accomodatesErr . "<br>";
     }
     if ($checkinErr != "" ) {
       $report .= $checkinErr . "<br>";

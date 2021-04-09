@@ -10,7 +10,7 @@ h1.title,h2{font-size: 2em;line-height: 3em;}
 h3{font-size: 1.5em; margin-bottom: 0.70em;}
 h4{font-size: 1.25em; margin-bottom: 0.75em;}
 p{margin-bottom: 1em;line-height: 1.5em;}
-
+i{font-size: 30px;}
 
 .btn{border:none !important;border-radius: 0;padding: 5px 30px;}
 .btn-default{background:#bfa145;box-shadow: none !important;color: #fff;}
@@ -171,4 +171,12 @@ body::-webkit-scrollbar {
     footer h4{margin-top: 2em;}
 
     .room-features .size-price{margin-bottom: 2em;}
+}
+.scale {
+    height: 5px;
+    width: 5px;
+}
+.pricecss {
+    text-align: right;
+    color: red;
 }

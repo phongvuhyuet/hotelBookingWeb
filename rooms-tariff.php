@@ -11,68 +11,168 @@
         <div class="col-sm-6 wowload fadeInUp">
             <div class="rooms"><img src="images/photos/8.jpg" class="img-responsive">
                 <div class="info">
-                    <h3>Basic room</h3>
                     <?php
-          $conn = new mysqli("localhost", "root", "", "databasehotel");
-          if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-          }
-          $sql = "SELECT * FROM roomtype WHERE typeID = 1";
-          $result = $conn->query($sql);
-          $row = $result->fetch_assoc();
-          echo "<ul>
-                        <li>Accommodates: " . $row["accomodates"] . "</li>
-                        <li>singleBeds: " . $row["singleBedNum"] . "</li>
-                        <li>doubleBed: " . $row["doubleBedNum"] . "</li>
-                        <li>Size: " . $row["size"] . " m2</li>
-                        <li>Cost: " . $row["cost"] . " VND</li>
-                    </ul>"
-          ?>
-                    <a href="room-details-1.php" class="btn btn-default">Check Details</a>
+                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    $sql = "SELECT * FROM roomtype WHERE typeID = 1";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                    echo "<h3>" . $row["roomName"] . "</h3>";
+                    ?>
+                    <p>Our junior Suites offer breathtaking view of the city skyline.</p>
+
+                    <hr
+                        style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
+                    <?php if ($row['wifi'] == 1)  ?>
+                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+
+                    <?php if ($row['tv'] == 1) ?>
+                    <i class="fa fa-tv" style="font-size:20px;"></i>
+
+                    <?php if ($row['air-conditional'] == 1) ?>
+                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+
+                    </ul>
+                    <?php
+
+                    $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
+                    echo $p;
+                    $para = "";
+                    for ($i = 0; $i < 115; $i++) {
+                        $para .= "&nbsp;";
+                    }
+
+                    echo $para . "$" . $row['cost'];
+                    ?>
+                    <a href="room-101.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 wowload fadeInUp">
             <div class="rooms"><img src="images/photos/9.jpg" class="img-responsive">
                 <div class="info">
-                    <h3>Luxirious Suites</h3>
                     <?php
-          $conn = new mysqli("localhost", "root", "", "databasehotel");
-          if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-          }
-          $sql = "SELECT * FROM roomtype WHERE typeID = 2";
-          $result = $conn->query($sql);
-          $row = $result->fetch_assoc();
-          echo "<ul>
-                        <li>Accommodates: " . $row["accomodates"] . "</li>
-                        <li>singleBeds: " . $row["singleBedNum"] . "</li>
-                        <li>doubleBed: " . $row["doubleBedNum"] . "</li>
-                        <li>Size: " . $row["size"] . " m2</li>
-                        <li>Cost: " . $row["cost"] . " VND</li>
-                    </ul>"
-          ?>
-                    <a href="room-details-2.php" class="btn btn-default">Check Details</a>
+                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    $sql = "SELECT * FROM roomtype WHERE typeID = 2";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                    echo "<h3>" . $row["roomName"] . "</h3>";
+                    ?>
+                    <p>Our junior Suites offer breathtaking view of the city skyline.</p>
+
+                    <hr
+                        style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
+                    <?php if ($row['wifi'] == 1)  ?>
+                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+
+                    <?php if ($row['tv'] == 1) ?>
+                    <i class="fa fa-tv" style="font-size:20px;"></i>
+
+                    <?php if ($row['air-conditional'] == 1) ?>
+                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+
+                    </ul>
+                    <?php
+
+                    $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
+                    echo $p;
+                    $para = "";
+                    for ($i = 0; $i < 115; $i++) {
+                        $para .= "&nbsp;";
+                    }
+
+                    echo $para . "$" . $row['cost'];
+                    ?>
+                    <a href="room-201.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 wowload fadeInUp">
             <div class="rooms"><img src="images/photos/10.jpg" class="img-responsive">
                 <div class="info">
-                    <h3>Luxirious Suites</h3>
-                    <p> Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret
-                        passed. Absolute one hastened mrs any sensible</p>
-                    <a href="room-details-3.php" class="btn btn-default">Check Details</a>
+                    <?php
+                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    $sql = "SELECT * FROM roomtype WHERE typeID = 3";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                    echo "<h3>" . $row["roomName"] . "</h3>";
+                    ?>
+                    <p>Our junior Suites offer breathtaking view of the city skyline.</p>
+
+                    <hr
+                        style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
+                    <?php if ($row['wifi'] == 1)  ?>
+                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+
+                    <?php if ($row['tv'] == 1) ?>
+                    <i class="fa fa-tv" style="font-size:20px;"></i>
+
+                    <?php if ($row['air-conditional'] == 1) ?>
+                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+
+                    </ul>
+                    <?php
+
+                    $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
+                    echo $p;
+                    $para = "";
+                    for ($i = 0; $i < 115; $i++) {
+                        $para .= "&nbsp;";
+                    }
+
+                    echo $para . "$" . $row['cost'];
+                    ?>
+                    <a href="room-301.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 wowload fadeInUp">
             <div class="rooms"><img src="images/photos/11.jpg" class="img-responsive">
                 <div class="info">
-                    <h3>Luxirious Suites</h3>
-                    <p> Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret
-                        passed. Absolute one hastened mrs any sensible</p><a href="room-details.php"
-                        class="btn btn-default">Check Details</a>
+                    <?php
+                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    $sql = "SELECT * FROM roomtype WHERE typeID = 4";
+                    $result = $conn->query($sql);
+                    $row = $result->fetch_assoc();
+                    echo "<h3>" . $row["roomName"] . "</h3>";
+                    ?>
+                    <p>Our junior Suites offer breathtaking view of the city skyline.</p>
+
+                    <hr
+                        style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
+                    <?php if ($row['wifi'] == 1)  ?>
+                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+
+                    <?php if ($row['tv'] == 1) ?>
+                    <i class="fa fa-tv" style="font-size:20px;"></i>
+
+                    <?php if ($row['air-conditional'] == 1) ?>
+                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+
+                    </ul>
+                    <?php
+
+                    $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
+                    echo $p;
+                    $para = "";
+                    for ($i = 0; $i < 115; $i++) {
+                        $para .= "&nbsp;";
+                    }
+
+                    echo $para . "$" . $row['cost'];
+                    ?>
+                    <a href="room-101.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>
@@ -91,8 +191,8 @@
                 <div class="info">
                     <h3>Luxirious Suites</h3>
                     <p> Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret
-                        passed. Absolute one hastened mrs any sensible</p><a href="room-details.php"
-                        class="btn btn-default">Check Details</a>
+                        passed. Absolute one hastened mrs any sensible</p>
+                    <a href="room-details.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>

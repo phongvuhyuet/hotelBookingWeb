@@ -10,7 +10,7 @@ h1.title,h2{font-size: 2em;line-height: 3em;}
 h3{font-size: 1.5em; margin-bottom: 0.70em;}
 h4{font-size: 1.25em; margin-bottom: 0.75em;}
 p{margin-bottom: 1em;line-height: 1.5em;}
-i{font-size: 30px;}
+
 
 .btn{border:none !important;border-radius: 0;padding: 5px 30px;}
 .btn-default{background:#bfa145;box-shadow: none !important;color: #fff;}
@@ -105,7 +105,7 @@ div.selector option{ padding: 10px;}
 /*rooms and tariff*/
 .rooms{margin-bottom: 2em;}
 .rooms .info{padding: 1.5em;background-color: #E8E7E0;}
-
+.rooms .scale{height: 20px;width: 30px;}
 
 .room-features .amenitites li{margin-bottom: 1em;}
 .room-features .size-price{background-color: #C7C5BB;padding: 2em 0;text-align: center;color: #fff;height: 10.97em;line-height: 3em;}
@@ -172,11 +172,4 @@ body::-webkit-scrollbar {
 
     .room-features .size-price{margin-bottom: 2em;}
 }
-.scale {
-    height: 5px;
-    width: 5px;
-}
-.pricecss {
-    text-align: right;
-    color: red;
-}
+

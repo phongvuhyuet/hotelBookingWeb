@@ -26,15 +26,15 @@
                     <hr
                         style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
                     <?php if ($row['wifi'] == 1)  ?>
-                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+                    <i class="fa fa-wifi" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['tv'] == 1) ?>
-                    <i class="fa fa-tv" style="font-size:20px;"></i>
+                    <i class="fa fa-tv" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['air-conditional'] == 1) ?>
-                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+                    <i class="fa fa-asterisk" style="font-size:20px;margin-left: 5px;"></i>
+                    <!-- <img class="scale" src="images/photos/air.jpg" alt="wifi" width="20px" height="20px"> -->
 
-                    </ul>
                     <?php
 
                     $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
@@ -67,16 +67,17 @@
 
                     <hr
                         style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
+
                     <?php if ($row['wifi'] == 1)  ?>
-                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+                    <i class="fa fa-wifi" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['tv'] == 1) ?>
-                    <i class="fa fa-tv" style="font-size:20px;"></i>
+                    <i class="fa fa-tv" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['air-conditional'] == 1) ?>
-                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+                    <i class="fa fa-asterisk" style="font-size:20px;margin-left: 5px;"></i>
 
-                    </ul>
+
                     <?php
 
                     $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
@@ -110,15 +111,16 @@
                     <hr
                         style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
                     <?php if ($row['wifi'] == 1)  ?>
-                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+
+                    <i class="fa fa-wifi" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['tv'] == 1) ?>
-                    <i class="fa fa-tv" style="font-size:20px;"></i>
+                    <i class="fa fa-tv" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['air-conditional'] == 1) ?>
-                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+                    <i class="fa fa-asterisk" style="font-size:20px;margin-left: 5px;"></i>
 
-                    </ul>
+
                     <?php
 
                     $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
@@ -152,15 +154,15 @@
                     <hr
                         style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">
                     <?php if ($row['wifi'] == 1)  ?>
-                    <i class="fa fa-wifi" style="font-size:20px;"></i>
+                    <i class="fa fa-wifi" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['tv'] == 1) ?>
-                    <i class="fa fa-tv" style="font-size:20px;"></i>
+                    <i class="fa fa-tv" style="font-size:20px;margin-left: 5px;"></i>
 
                     <?php if ($row['air-conditional'] == 1) ?>
-                    <i class="fa fa-asterisk" style="font-size:20px;"></i>
+                    <i class="fa fa-asterisk" style="font-size:20px;margin-left: 5px;"></i>
 
-                    </ul>
+
                     <?php
 
                     $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
@@ -176,26 +178,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 wowload fadeInUp">
-            <div class="rooms"><img src="images/photos/9.jpg" class="img-responsive">
-                <div class="info">
-                    <h3>Luxirious Suites</h3>
-                    <p> Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret
-                        passed. Absolute one hastened mrs any sensible</p><a href="room-details.php"
-                        class="btn btn-default">Check Details</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 wowload fadeInUp">
-            <div class="rooms"><img src="images/photos/8.jpg" class="img-responsive">
-                <div class="info">
-                    <h3>Luxirious Suites</h3>
-                    <p> Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret
-                        passed. Absolute one hastened mrs any sensible</p>
-                    <a href="room-details.php" class="btn btn-default">Check Details</a>
-                </div>
-            </div>
-        </div>
+
 
 
         <!-- <div class="text-center">

@@ -97,13 +97,13 @@
             <h1 class="title">Reservation</h1>
             <form method="post" role="form" class="wowload fadeInRight" action="gohome.php">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Name" name="name">
+                    <input type="text" class="form-control" placeholder="Name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" name="email">
+                    <input type="email" class="form-control" placeholder="Email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="Phone" class="form-control" placeholder="Phone" name="phone">
+                    <input type="Phone" class="form-control" placeholder="Phone" name="phone" required>
                 </div>
 
 
@@ -112,14 +112,14 @@
 
                     <label for="checkin">Check In:</label>
 
-                    <input type="date" class="form-control" placeholder="checkin" name="checkin">
+                    <input type="date" class="form-control" placeholder="checkin" name="checkin" required>
 
                 </div>
                 <div class="form-group ">
                     <!-- <div class="form-control"> -->
                     <label for="checkout">Check Out:</label>
 
-                    <input type="date" class="form-control" id="checkout" name="checkout">
+                    <input type="date" class="form-control" id="checkout" name="checkout" required>
                     <!-- </div> -->
                 </div>
 

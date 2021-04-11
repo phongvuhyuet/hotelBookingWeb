@@ -174,7 +174,7 @@
 
                     echo $para . "$" . $row['cost'];
                     ?>
-                    <a href="room-101.php" class="btn btn-default">Check Details</a>
+                    <a href="room-401.php" class="btn btn-default">Check Details</a>
                 </div>
             </div>
         </div>

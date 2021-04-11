@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; if (!session_id()) session_start();?>
 
 <div class="container">
     <div class="row">
@@ -135,4 +135,4 @@
 
 
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; $_SESSION["roomType"] = "01"?>

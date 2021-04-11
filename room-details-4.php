@@ -141,4 +141,4 @@ session_start();
 
     </div>
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; $_SESSION["roomType"] = "04"?>

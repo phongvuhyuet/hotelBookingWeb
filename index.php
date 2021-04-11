@@ -34,32 +34,34 @@
                 <h3>Reservation</h3>
                 <form method="post" role="form" class="wowload fadeInRight" action="connDB.php">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="name">
+                        <input type="text" class="form-control" placeholder="Name" name="name" required>
+                        
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email" name="email">
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        
                     </div>
                     <div class="form-group">
-                        <input type="Phone" class="form-control" placeholder="Phone" name="phone">
+                        <input type="Phone" class="form-control" placeholder="Phone" name="phone" required>
                     </div>
 
 
-                    <div class="row">
-                        <div class="form-group col-md-6">
 
-                            <label for="checkin">Check In:</label>
+                    <div class="form-group ">
 
-                            <input type="date" class="form-control" placeholder="checkin" name="checkin">
+                        <label for="checkin">Check In:</label>
 
-                        </div>
-                        <div class="form-group col-md-6">
-                            <!-- <div class="form-control"> -->
-                            <label for="checkout">Check Out:</label>
-
-                            <input type="date" class="form-control" id="checkout" name="checkout">
-                            <!-- </div> -->
-                        </div>
+                        <input type="date" class="form-control" placeholder="checkin" name="checkin" required>
                     </div>
+
+                    <div class="form-group ">
+                        <!-- <div class="form-control"> -->
+                        <label for="checkout">Check Out:</label>
+
+                        <input type="date" class="form-control" id="checkout" name="checkout" required> 
+                        <!-- </div> -->
+                    </div>
+
                     <!-- <div class="form-group">
             <textarea class="form-control"  placeholder="Message" rows="4" name="message"></textarea>
         </div> -->

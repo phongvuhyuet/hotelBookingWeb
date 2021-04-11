@@ -62,9 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($checkoutErr != "" ) {
       $report .= $checkoutErr . "<br>";
     }
-    $report = '<span style=\'color:#FF0400\'>'.$report.'</span>';
-    echo $report;
-    echo '<a href="index.php">Go back</a>';
+    
   }
 
 }

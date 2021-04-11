@@ -103,15 +103,15 @@ session_start();
                 <form method="post" role="form" class="wowload fadeInRight" action="gohome.php">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Name" name="name"
-                            value="<?php echo $_SESSION["name"] ?>">
+                            value="<?php echo $_SESSION["name"] ?>" readonly>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Email" name="email"
-                            value="<?php echo $_SESSION["email"] ?>">
+                            value="<?php echo $_SESSION["email"] ?>" readonly>
                     </div>
                     <div class="form-group">
                         <input type="Phone" class="form-control" placeholder="Phone" name="phone"
-                            value="<?php echo $_SESSION["phone"] ?>">
+                            value="<?php echo $_SESSION["phone"] ?>" readonly>
                     </div>
 
 
@@ -121,7 +121,7 @@ session_start();
                         <label for="checkin">Check In:</label>
 
                         <input type="date" class="form-control" placeholder="checkin" name="checkin"
-                            value="<?php echo $_SESSION["checkin"] ?>">
+                            value="<?php echo $_SESSION["checkin"] ?>" readonly>
 
                     </div>
                     <div class="form-group ">
@@ -129,7 +129,7 @@ session_start();
                         <label for="checkout">Check Out:</label>
 
                         <input type="date" class="form-control" id="checkout" name="checkout"
-                            value="<?php echo $_SESSION["checkout"] ?>">
+                            value="<?php echo $_SESSION["checkout"] ?>" readonly>
                         <!-- </div> -->
                     </div>
 
@@ -141,4 +141,5 @@ session_start();
 
     </div>
 </div>
-<?php include 'footer.php'; $_SESSION["roomType"] = "02"?>
+<?php include 'footer.php';
+$_SESSION["roomType"] = "02" ?>

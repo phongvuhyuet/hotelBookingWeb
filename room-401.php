@@ -1,11 +1,12 @@
-<?php include 'header.php'; if (!session_id()) session_start()?>
+<?php include 'header.php';
+if (!session_id()) session_start() ?>
 
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <?php
             $conn = new mysqli("localhost", "root", "", "databasehotel");
-            $sql = "SELECT * FROM roomtype WHERE typeId = 01 ";
+            $sql = "SELECT * FROM roomtype WHERE typeId = 04 ";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             ?>
@@ -135,4 +136,5 @@
 
 
 </div>
-<?php include 'footer.php'; $_SESSION["roomType"] = "04"?>
+<?php include 'footer.php';
+$_SESSION["roomType"] = "04" ?>

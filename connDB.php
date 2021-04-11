@@ -13,15 +13,28 @@ $_SESSION["checkout"] = $checkout;
 
 if ($checkErr == false) {
   include "success.php";
-} else{
-  ?>
-  <script>
+} else {
+?>
+<div class="banner">
+    <img src="images/photos/banner.jpg" class="img-responsive" alt="slide">
 
-  alert("<?php echo $report; ?>");
-  
+    <div class="welcome-message">
+        <div class="wrap-info">
+            <div class="information">
+                <h1 class="animated fadeInDown">SORRY!</h1>
+                <p class="animated fadeInUp">Roomtype is full!</p>
+                <a class="test2" href="index.php">
+                    <span class="test"></span><span class="test"></span><span class="test"></span><span
+                        class="test"></span>
+                    Back
+                </a>
+            </div>
 
-  </script>
-  <?php
+
+        </div>
+    </div>
+</div>
+<?php
   include "index.php";
 }
 ?>

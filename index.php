@@ -35,11 +35,11 @@
                 <form method="post" role="form" class="wowload fadeInRight" action="connDB.php">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Name" name="name" required>
-                        
+
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Email" name="email" required>
-                        
+
                     </div>
                     <div class="form-group">
                         <input type="Phone" class="form-control" placeholder="Phone" name="phone" required>
@@ -58,7 +58,7 @@
                         <!-- <div class="form-control"> -->
                         <label for="checkout">Check Out:</label>
 
-                        <input type="date" class="form-control" id="checkout" name="checkout" required> 
+                        <input type="date" class="form-control" id="checkout" name="checkout" required>
                         <!-- </div> -->
                     </div>
 
@@ -67,7 +67,9 @@
         </div> -->
                     <button class="btn btn-default">Submit</button>
                 </form>
+
             </div>
+
         </div>
     </div>
 </div>

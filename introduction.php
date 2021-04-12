@@ -5,11 +5,12 @@
     <div class="row">
         <div class="col-sm-4">
             <p>DPT hotel is a lovely hotel, in the heart of Ha Noi. Our hotel is surrounded by the city centre’s elegant
-                shops, cafés, restaurants, bars, Spa.
+                shops, cafés, restaurants, bars, Spa.Superbly appointed guest rooms and suites are created as spacious
+                havens for relaxation and rejuvenation.
             </p>
         </div>
         <div class="col-sm-4">
-            <p>Superbly appointed guest rooms and suites are created as spacious havens for relaxation and rejuvenation.
+            <p>
                 Each guest room is endowed with our signature posturepedic mattresses with integrated pillow top for the
                 ultimate in comfort.
                 Each of our guest rooms, designed with contemporary Vietnamese style, come with a walk in shower.</p>

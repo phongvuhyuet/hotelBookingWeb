@@ -10,9 +10,9 @@ $_SESSION["email"] = $email;
 $_SESSION["phone"] = $phone;
 $_SESSION["checkin"] = $checkin;
 $_SESSION["checkout"] = $checkout;
-
+include "header.php";
 if ($checkErr == false) {
-  include "success.php";
+    include "success.php";
 } else {
 ?>
 <div class="banner">
@@ -35,6 +35,6 @@ if ($checkErr == false) {
     </div>
 </div>
 <?php
-  include "index.php";
 }
 ?>
+<?php include "footer.php" ?>

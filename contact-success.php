@@ -1,6 +1,6 @@
 <?php
 include 'backendPHP/validateFormContact.php';
-include "success.php";
+include "header.php";
 if ($checkErr == false) {
     $conn = new PDO("mysql:host=localhost;dbname=databasehotel", "root", "");
     // set the PDO error mode to exception

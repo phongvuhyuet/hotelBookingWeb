@@ -5,15 +5,21 @@ include 'backendphp/validateForm.php';
 
 if ($checkErr == false) {
     include 'backendphp/getAvailableRoomType.php';
-    //insert customer info to database
-    $conn = new PDO("mysql:host=localhost;dbname=databasehotel", "root", "");
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $querry = "INSERT INTO customer (name, phoneNumber, email)
-        VALUES ('" . $name . "', '" . $phone . "', '" . $email . "');";
-    $stmt = $conn->prepare($querry);
-    $stmt->execute();
-
+   //insert customer info to database
+   $conn = new PDO("mysql:host=localhost;dbname=databasehotel", "root", "");
+   // set the PDO error mode to exception
+   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   $querry = "select * from customer
+   where name = '". $name ."' and email = '". $email ."' and phoneNumber = '". $phone ."';";
+   $stmt1 = $conn->prepare($querry);
+   $stmt1->execute();
+   $result = $stmt1->fetch();
+   if ($result == false) {
+       $querry = "INSERT INTO customer (name, phoneNumber, email)
+       VALUES ('". $name ."', '". $phone ."', '". $email ."');";
+       $stmt = $conn->prepare($querry);
+       $stmt->execute();
+   }
     if (sizeof($roomTypeAvailable) == 0 || (array_search($_SESSION["roomType"], $roomTypeAvailable) == false && ($roomTypeAvailable[0] != $_SESSION["roomType"]))) {
 ?>
 <div class="banner">
@@ -23,7 +29,7 @@ if ($checkErr == false) {
         <div class="wrap-info">
             <div class="information">
                 <h1 class="animated fadeInDown">SORRY!</h1>
-                <p class="animated fadeInUp">Roomtype is full!</p>
+                <p class="animated fadeInUp">No room is available! Please choose other room type or other days</p>
                 <a class="test2" href="rooms-tariff.php">
                     <span class="test"></span><span class="test"></span><span class="test"></span><span
                         class="test"></span>
@@ -41,8 +47,14 @@ if ($checkErr == false) {
     } else {
         foreach ($checkRoomType[$_SESSION["roomType"]] as $room) {
             if ($checkRoom[$room] == true) {
-                $querry2 = "insert into booking (checkIn, checkOut, customerID, roomID)
-                    values('" . $checkin . "','" . $checkout . "',last_insert_id(),'" . $room . "');";
+                $querry2;
+                    if ($result == false) {
+                        $querry2= "insert into booking (checkIn, checkOut, customerID, roomID)
+                        values('".$checkin."','".$checkout."',last_insert_id(),'".$room."');";
+                    } else {
+                        $querry2= "insert into booking (checkIn, checkOut, customerID, roomID)
+                        values('".$checkin."','".$checkout."',". $result["customerID"] .",'".$room."');";
+                    }
                 $stmt2 = $conn->prepare($querry2);
                 $stmt2->execute();
 

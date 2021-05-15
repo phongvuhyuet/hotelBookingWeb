@@ -1,11 +1,11 @@
 <?php
 include 'header.php';
 if (!session_id()) session_start();
-include 'backendphp/validateForm.php';
+include "backendPHP/validateForm.php";
 echo (var_dump($checkErr));
 if ($checkErr == false) {
     echo("khong loi");
-    include 'backendphp/getAvailableRoomType.php';
+    include 'backendPHP/getAvailableRoomType.php';
     
    //insert customer info to database
    $hostname = "remotemysql.com";

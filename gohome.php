@@ -6,7 +6,7 @@ echo (var_dump($checkErr));
 if ($checkErr == false) {
     echo("khong loi");
     include 'backendphp/getAvailableRoomType.php';
-    echo("vuot qua");
+    
    //insert customer info to database
    $hostname = "remotemysql.com";
    $username = "F4Wwgj61sG";
@@ -86,6 +86,7 @@ if ($checkErr == false) {
             }
         }
     }
+    echo("vuot qua");
 } else {
     echo("co loi");
     ?>

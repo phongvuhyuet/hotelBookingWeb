@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-try {
+
   $hostname = "remotemysql.com";
    $username = "F4Wwgj61sG";
    $password = "XXDDlCPtw2";
@@ -44,6 +41,4 @@ try {
     }
     if ($check == true) array_push($roomTypeAvailable, $key);
   }
-} catch (PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+echo("timdc");

@@ -3,6 +3,7 @@ $nameErr = $emailErr = $phoneErr = $checkinErr = $checkoutErr = "";
 $name = $email = $phone = $checkin = $checkout = "";
 $checkErr = false;
 $report = "";
+echo(var_dump($checkErr));
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";

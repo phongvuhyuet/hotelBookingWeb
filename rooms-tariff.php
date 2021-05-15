@@ -58,7 +58,11 @@
             <div class="rooms"><img src="images/photos/9.jpg" class="img-responsive">
                 <div class="info">
                     <?php
-                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                   $hostname = "remotemysql.com";
+                   $username = "F4Wwgj61sG";
+                   $password = "XXDDlCPtw2";
+                   $database = "F4Wwgj61sG";
+                   $conn = new mysqli($hostname, $username,$password,$database);
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
@@ -101,7 +105,11 @@
             <div class="rooms"><img src="images/photos/10.jpg" class="img-responsive">
                 <div class="info">
                     <?php
-                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    $hostname = "remotemysql.com";
+                    $username = "F4Wwgj61sG";
+                    $password = "XXDDlCPtw2";
+                    $database = "F4Wwgj61sG";
+                    $conn = new mysqli($hostname, $username,$password,$database);
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
@@ -144,7 +152,11 @@
             <div class="rooms"><img src="images/photos/11.jpg" class="img-responsive">
                 <div class="info">
                     <?php
-                    $conn = new mysqli("localhost", "root", "", "databasehotel");
+                    $hostname = "remotemysql.com";
+                    $username = "F4Wwgj61sG";
+                    $password = "XXDDlCPtw2";
+                    $database = "F4Wwgj61sG";
+                    $conn = new mysqli($hostname, $username,$password,$database);
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }

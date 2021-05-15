@@ -10,20 +10,15 @@ if ($checkErr == false) {
    $username = "F4Wwgj61sG";
    $password = "XXDDlCPtw2";
    $database = "F4Wwgj61sG";
-   
-   $conn = new PDO("mysql:host=$hostname;dbname=$database", $username,$password);
-   // set the PDO error mode to exception
-   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   $conn = new mysqli($hostname, $username,$password,$database);
    $querry = "select * from customer
    where name = '". $name ."' and email = '". $email ."' and phoneNumber = '". $phone ."';";
-   $stmt1 = $conn->prepare($querry);
-   $stmt1->execute();
-   $result = $stmt1->fetch();
+   $res = $conn->query($querry);
+    $result = $res->fetch_assoc();
    if ($result == false) {
        $querry = "INSERT INTO customer (name, phoneNumber, email)
        VALUES ('". $name ."', '". $phone ."', '". $email ."');";
-       $stmt = $conn->prepare($querry);
-       $stmt->execute();
+       $conn->query($querry);
    }
     if (sizeof($roomTypeAvailable) == 0 || (array_search($_SESSION["roomType"], $roomTypeAvailable) == false && ($roomTypeAvailable[0] != $_SESSION["roomType"]))) {
 ?>
@@ -60,8 +55,7 @@ if ($checkErr == false) {
                         $querry2= "insert into booking (checkIn, checkOut, customerID, roomID)
                         values('".$checkin."','".$checkout."',". $result["customerID"] .",'".$room."');";
                     }
-                $stmt2 = $conn->prepare($querry2);
-                $stmt2->execute();
+                    $conn->query($querry2);
 
         ?>
 <div class="banner">

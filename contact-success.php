@@ -3,23 +3,19 @@ include 'backendPHP/validateFormContact.php';
 include "header.php";
 if ($checkErr == false) {
     $hostname = "remotemysql.com";
-   $username = "F4Wwgj61sG";
-   $password = "XXDDlCPtw2";
-   $database = "F4Wwgj61sG";
-   
-   $conn = new PDO("mysql:host=$hostname;dbname=$database", $username,$password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $username = "F4Wwgj61sG";
+    $password = "XXDDlCPtw2";
+    $database = "F4Wwgj61sG";
+    $conn = new mysqli($hostname, $username,$password,$database);
     $querry = "select * from customer
         where name = '" . $name . "' and email = '" . $email . "' and phoneNumber = '" . $phone . "';";
-    $stmt1 = $conn->prepare($querry);
-    $stmt1->execute();
-    $result = $stmt1->fetch();
+    
+    $res = $conn->query($querry);
+    $result = $res->fetch_assoc();
     if ($result == false) {
         $querry = "INSERT INTO customer (name, phoneNumber, email)
             VALUES ('" . $name . "', '" . $phone . "', '" . $email . "');";
-        $stmt = $conn->prepare($querry);
-        $stmt->execute();
+        $conn->query($querry);
     }
     $querry2;
     if ($result == false) {
@@ -29,8 +25,7 @@ if ($checkErr == false) {
         $querry2 = "insert into message (messageContent, customerID)
             values('" . $message . "'," . $result["customerID"] . ");";
     }
-    $stmt2 = $conn->prepare($querry2);
-    $stmt2->execute();
+    $conn->query($querry2);
 ?>
 <div class="banner">
     <img src="images/photos/banner.jpg" class="img-responsive" alt="slide">

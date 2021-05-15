@@ -4,6 +4,7 @@ if (!session_id()) session_start();
 include 'backendphp/validateForm.php';
 
 if ($checkErr == false) {
+    echo("khong loi");
     include 'backendphp/getAvailableRoomType.php';
    //insert customer info to database
 //    $hostname = "remotemysql.com";
@@ -85,6 +86,7 @@ if ($checkErr == false) {
         }
     }
 } else {
+    echo("co loi");
     ?>
 <div class="banner">
     <img src="images/photos/banner.jpg" class="img-responsive" alt="slide">

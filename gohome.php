@@ -2,16 +2,17 @@
 include 'header.php';
 if (!session_id()) session_start();
 include 'backendphp/validateForm.php';
-
+echo (var_dump($checkErr));
 if ($checkErr == false) {
     echo("khong loi");
     include 'backendphp/getAvailableRoomType.php';
+    echo("vuot qua");
    //insert customer info to database
-//    $hostname = "remotemysql.com";
-//    $username = "F4Wwgj61sG";
-//    $password = "XXDDlCPtw2";
-//    $database = "F4Wwgj61sG";
-//    $conn = new mysqli($hostname, $username,$password,$database);
+   $hostname = "remotemysql.com";
+   $username = "F4Wwgj61sG";
+   $password = "XXDDlCPtw2";
+   $database = "F4Wwgj61sG";
+   $conn = new mysqli($hostname, $username,$password,$database);
    $querry = "select * from customer
    where name = '". $name ."' and email = '". $email ."' and phoneNumber = '". $phone ."';";
    $res = $conn->query($querry);

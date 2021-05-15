@@ -27,9 +27,9 @@ try {
   $querry1 = "select roomID from booking where not ((checkIn < '" . $checkin . "' and checkOut <= '" . $checkin . "') or (checkIn >= '" . $checkout . "' and checkOut > '" . $checkout . "'));";
   // $stmt1 = $conn->prepare($querry1);
   // $stmt1->execute();
-  $res = $conn->query($querry1);
+  $res1 = $conn->query($querry1);
   // check false for unavailable roomID
-  while ($row1 = $res->fetch_assoc()) {
+  while ($row1 = $res1->fetch_assoc()) {
     $checkRoom[$row1["roomID"]] = false;
   }
   // get available roomType

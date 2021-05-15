@@ -5,6 +5,7 @@ include 'backendPHP/validateForm.php';
 
 if ($checkErr == false) {
     include 'backendPHP/getAvailableRoomType.php';
+    
    //insert customer info to database
    $hostname = "remotemysql.com";
    $username = "F4Wwgj61sG";

@@ -7,7 +7,11 @@ session_start();
         <div class="col-md-9">
 
             <?php
-            $conn = new mysqli("localhost", "root", "", "databasehotel");
+             $hostname = "remotemysql.com";
+             $username = "F4Wwgj61sG";
+             $password = "XXDDlCPtw2";
+             $database = "F4Wwgj61sG";
+             $conn = new mysqli($hostname, $username,$password,$database);
             $sql = "SELECT * FROM roomtype WHERE typeId = 01 ";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();

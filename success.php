@@ -8,7 +8,11 @@ include "backendPHP/getAvailableRoomType.php";
     <div class="row">
         <?php
         foreach ($roomTypeAvailable as $value) {
-            $conn = new mysqli("localhost", "root", "", "databasehotel");
+            $hostname = "remotemysql.com";
+            $username = "F4Wwgj61sG";
+            $password = "XXDDlCPtw2";
+            $database = "F4Wwgj61sG";
+            $conn = new mysqli($hostname, $username,$password,$database);
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }

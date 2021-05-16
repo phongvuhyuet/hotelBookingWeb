@@ -15,3 +15,7 @@ Khách đặt phòng khách sạn
 ![ERD](https://user-images.githubusercontent.com/70512647/114443294-b7ee3080-9bf7-11eb-9b0d-8b24512408ee.jpg)
 ### Database structure:
 <img width="503" alt="database" src="https://user-images.githubusercontent.com/70512647/114443169-912ffa00-9bf7-11eb-9455-f627eab4e769.PNG">
+
+## Deployment:
+Dự án được deploy miễn phí trên heroku cùng với database được up trên remotemysql.com
+https://hotelbookinguet.herokuapp.com/

@@ -1,19 +1,22 @@
 <?php include 'header.php';
-if (!session_id()) session_start(); ?>
+if (!session_id()) {
+    session_start();
+}
+?>
 
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             <?php
-             $hostname = "remotemysql.com";
-             $username = "F4Wwgj61sG";
-             $password = "XXDDlCPtw2";
-             $database = "F4Wwgj61sG";
-             $conn = new mysqli($hostname, $username,$password,$database);
-            $sql = "SELECT * FROM roomtype WHERE typeId = 01 ";
-            $result = $conn->query($sql);
-            $row = $result->fetch_assoc();
-            ?>
+$hostname = "us-cdbr-east-04.cleardb.com";
+$username = "b2032f6fa74e31";
+$password = "07995654";
+$database = "heroku_e35eedde88722eb";
+$conn = new mysqli($hostname, $username, $password, $database);
+$sql = "SELECT * FROM roomtype WHERE typeId = 01 ";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+?>
             <h1 class="title"><?php echo $row["roomName"] ?></h1>
 
 
@@ -41,29 +44,37 @@ if (!session_id()) session_start(); ?>
                         <!-- xu ly service -->
 
                         <h3>Our room's service :</h3>
-                        <?php if ($row['wifi'] == 1)  ?>
+                        <?php if ($row['wifi'] == 1) {
+    ;
+}
+?>
                         <ul>
                             <li><i class="fa fa-wifi"></i>Wifi</li>
                             <br>
-                            <?php if ($row['tv'] == 1) ?>
+                            <?php if ($row['tv'] == 1) {
+    ;
+}
+?>
                             <li><i class="fa fa-tv"></i> Television</li>
                             <br>
-                            <?php if ($row['air-conditional'] == 1) ?>
+                            <?php if ($row['air-conditional'] == 1) {
+    ;
+}
+?>
                             <li><i class="fa fa-asterisk"></i>Air-conditional</li>
                             <br>
                         </ul>
                         <?php
-                        $var = '<hr style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">';
-                        echo $var;
-                        echo "<h3>Properties:</h3>";
-                        echo "<ul>
+$var = '<hr style="width:100%;text-align:left;margin-left:0;height:1px;border-width:0;color:gray;background-color:gray">';
+echo $var;
+echo "<h3>Properties:</h3>";
+echo "<ul>
                     <li>Accommodates: " . $row["accomodates"] . "</li><br>
                     <li>singleBeds: " . $row["singleBedNum"] . "</li><br>
                     <li>doubleBed: " . $row["doubleBedNum"] . "</li>
                     </ul>"
 
-
-                        ?>
+?>
 
 
 
@@ -82,16 +93,16 @@ if (!session_id()) session_start(); ?>
                         <div class="size-price">
                             Size
                             <?php
-                            echo "<span>" . $row["size"] . " m2</span>";
-                            ?>
+echo "<span>" . $row["size"] . " m2</span>";
+?>
                         </div>
                     </div>
                     <div class="col-sm-3 col-md-3">
                         <div class="size-price">
                             Price
                             <?php
-                            echo "<span>" . $row["cost"] . "</span>";
-                            ?>
+echo "<span>" . $row["cost"] . "</span>";
+?>
                         </div>
                     </div>
                 </div>
@@ -141,4 +152,4 @@ if (!session_id()) session_start(); ?>
 
 </div>
 <?php include 'footer.php';
-$_SESSION["roomType"] = "01"; ?>
+$_SESSION["roomType"] = "01";?>

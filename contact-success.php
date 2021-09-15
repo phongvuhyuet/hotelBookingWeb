@@ -2,14 +2,14 @@
 include 'backendPHP/validateFormContact.php';
 include "header.php";
 if ($checkErr == false) {
-    $hostname = "remotemysql.com";
-    $username = "F4Wwgj61sG";
-    $password = "XXDDlCPtw2";
-    $database = "F4Wwgj61sG";
-    $conn = new mysqli($hostname, $username,$password,$database);
+    $hostname = "us-cdbr-east-04.cleardb.com";
+    $username = "b2032f6fa74e31";
+    $password = "07995654";
+    $database = "heroku_e35eedde88722eb";
+    $conn = new mysqli($hostname, $username, $password, $database);
     $querry = "select * from customer
         where name = '" . $name . "' and email = '" . $email . "' and phoneNumber = '" . $phone . "';";
-    
+
     $res = $conn->query($querry);
     $result = $res->fetch_assoc();
     if ($result == false) {
@@ -26,7 +26,7 @@ if ($checkErr == false) {
             values('" . $message . "'," . $result["customerID"] . ");";
     }
     $conn->query($querry2);
-?>
+    ?>
 <div class="banner">
     <img src="images/photos/banner.jpg" class="img-responsive" alt="slide">
 
@@ -48,7 +48,7 @@ if ($checkErr == false) {
 </div>
 <?php
 } else {
-?>
+    ?>
 <div class="banner">
     <img src="images/photos/banner.jpg" class="img-responsive" alt="slide">
 

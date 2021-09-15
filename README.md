@@ -17,5 +17,5 @@ Khách đặt phòng khách sạn
 <img width="503" alt="database" src="https://user-images.githubusercontent.com/70512647/114443169-912ffa00-9bf7-11eb-9455-f627eab4e769.PNG">
 
 ## Deployment:
-Dự án được deploy miễn phí trên heroku cùng với database được up trên remotemysql.com
+Dự án được deploy miễn phí trên heroku cùng với database được up trên us-cdbr-east-04.cleardb.com
 https://hotelbookinguet.herokuapp.com/

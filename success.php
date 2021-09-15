@@ -54,12 +54,7 @@ foreach ($roomTypeAvailable as $value) {
 
     $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
     echo $p;
-    $para = "";
-    for ($i = 0; $i < 115; $i++) {
-        $para .= "&nbsp;";
-    }
-
-    echo $para . "$" . $row['cost'];
+    echo '<p style="text-align: right; margin: 0px; font-size: 20px;">' . number_format($row['cost'], 0, '', ' ') . '</p>';
     ?>
 
                     <a href=<?php echo $row["room_data"] ?> class="btn btn-default">Check Details</a>

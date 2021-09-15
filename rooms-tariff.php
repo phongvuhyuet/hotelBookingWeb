@@ -52,14 +52,9 @@ echo "<h3>" . $row["roomName"] . "</h3>";
 
 $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
 echo $p;
-$para = "";
-for ($i = 0; $i < 115; $i++) {
-    $para .= "&nbsp;";
-}
-
-echo $para . "$" . $row['cost'];
+echo '<p style="text-align: right; margin: 0px; font-size: 20px;">' . number_format($row['cost'], 0, '', ' ') . '</p>';
 ?>
-                    <a href="room-101.php" class="btn btn-default">Check Details</a>
+                    <a href="room-101.php" class="btn btn-default block">Check Details</a>
                 </div>
             </div>
         </div>
@@ -108,12 +103,7 @@ echo "<h3>" . $row["roomName"] . "</h3>";
 
 $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
 echo $p;
-$para = "";
-for ($i = 0; $i < 115; $i++) {
-    $para .= "&nbsp;";
-}
-
-echo $para . "$" . $row['cost'];
+echo '<p style="text-align: right; margin: 0px; font-size: 20px;">' . number_format($row['cost'], 0, '', ' ') . '</p>';
 ?>
                     <a href="room-201.php" class="btn btn-default">Check Details</a>
                 </div>
@@ -164,12 +154,7 @@ echo "<h3>" . $row["roomName"] . "</h3>";
 
 $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
 echo $p;
-$para = "";
-for ($i = 0; $i < 115; $i++) {
-    $para .= "&nbsp;";
-}
-
-echo $para . "$" . $row['cost'];
+echo '<p style="text-align: right; margin: 0px; font-size: 20px;">' . number_format($row['cost'], 0, '', ' ') . '</p>';
 ?>
                     <a href="room-301.php" class="btn btn-default">Check Details</a>
                 </div>
@@ -219,12 +204,7 @@ echo "<h3>" . $row["roomName"] . "</h3>";
 
 $p = '<p style="text-align: right;font-size: 20px;font-weight: bold;">Price</p>';
 echo $p;
-$para = "";
-for ($i = 0; $i < 115; $i++) {
-    $para .= "&nbsp;";
-}
-
-echo $para . "$" . $row['cost'];
+echo '<p style="text-align: right; margin: 0px; font-size: 20px;">' . number_format($row['cost'], 0, '', ' ') . '</p>';
 ?>
                     <a href="room-401.php" class="btn btn-default">Check Details</a>
                 </div>
@@ -246,5 +226,6 @@ echo $para . "$" . $row['cost'];
     </div> -->
 
 
+    </div>
     </div>
     <?php include 'footer.php';?>
